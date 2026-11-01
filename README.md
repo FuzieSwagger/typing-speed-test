@@ -63,6 +63,7 @@ Vanilla JavaScript: без фреймворков, зависимостей и �
 .
 ├── assets/
 │   ├── favicon.svg      # иконка сайта
+│   ├── og.png           # превью для соцсетей (Open Graph)
 │   └── preview.webp     # превью для README
 ├── index.html           # разметка интерфейса
 ├── style.css            # тёмная тема, анимации, адаптивность
