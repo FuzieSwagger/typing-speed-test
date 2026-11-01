@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta
+    name="description"
+    content="Минималистичный тест скорости печати на 60 секунд: скорость, точность и результат."
+  />
+  <title>Typing Speed Test — by fuzie</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Typing Speed Test — by fuzie" />
+  <meta
+    property="og:description"
+    content="Минималистичный тест скорости печати на 60 секунд: скорость, точность и результат."
+  />
+  <meta property="og:url" content="https://fuzieswagger.github.io/typing-speed-test/" />
+  <meta
+    property="og:image"
+    content="https://fuzieswagger.github.io/typing-speed-test/assets/preview.webp"
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <p class="eyebrow">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        тест скорости печати · 60 секунд
+      </p>
+      <h1 class="title">Typing Speed Test</h1>
+      <p class="byline">by <span class="byline__name">fuzie</span></p>
+      <p class="subtitle">
+        Проверьте, насколько быстро и точно вы печатаете. У вас 60 секунд.
+      </p>
+    </header>
+
+    <main class="main">
+      <div class="toolbar">
+        <div class="timer" id="timer-box" role="timer" aria-label="Осталось времени">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="12" cy="13" r="8" />
+            <path d="M12 9v4l2.5 2.5" />
+            <path d="M9 2h6" />
+          </svg>
+          <span class="timer__value" id="timer">60 с</span>
+        </div>
+
+        <button class="button" id="restart" type="button">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+            <path d="M21 3v6h-6" />
+          </svg>
+          <span>Заново</span>
+        </button>
+      </div>
+
+      <section class="typing-card" id="typing-card" aria-label="Область печати">
+        <p class="typing-card__text" id="text" lang="ru" aria-hidden="true"></p>
+
+        <textarea
+          id="input"
+          class="typing-card__input"
+          rows="1"
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+          aria-label="Введите текст здесь"
+        ></textarea>
+      </section>
+
+      <p class="hint" id="hint">
+        <span class="hint__key">Клик</span> по тексту, чтобы начать
+        <span class="hint__sep" aria-hidden="true">·</span>
+        <span class="hint__key">Esc</span> — заново
+      </p>
+
+      <section class="results" id="results" aria-labelledby="results-title" aria-live="polite" hidden>
+        <header class="results__header">
+          <p class="results__eyebrow">результат</p>
+          <h2 class="results__title" id="results-title">Время вышло!</h2>
+          <p class="results__subtitle" id="results-subtitle">Ваш результат за 60 секунд.</p>
+        </header>
+
+        <dl class="results__grid">
+          <div class="stat">
+            <dt class="stat__label">Скорость</dt>
+            <dd class="stat__value">
+              <span id="result-wpm">0</span>
+              <span class="stat__unit">слов/мин</span>
+            </dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__label">Точность</dt>
+            <dd class="stat__value" id="result-accuracy">0%</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__label">Время</dt>
+            <dd class="stat__value" id="result-time">60 с</dd>
+          </div>
+        </dl>
+
+        <button class="button button--primary results__restart" id="restart-result" type="button">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+            <path d="M21 3v6h-6" />
+          </svg>
+          <span>Попробовать снова</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Чистый HTML, CSS и JavaScript — без фреймворков.</p>
+    </footer>
+  </div>
+</body>
+</html>
